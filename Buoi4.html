@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biểu Mẫu Đăng Ký Ứng Tuyển</title>
+
+    <!-- 1. Thẻ <style> nằm đúng BÊN TRONG <head> -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* 2. Dùng dấu chấm .form-container để chọn đúng class */
+        .form-container {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            max-width: 500px;
+            border: 10px solid aliceblue;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto; /* Căn giữa form */
+        }
+
+        h2 {
+            text-align: center;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #000000;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold; /* Sửa 'light' thành 'bold' */
+            margin-bottom: 5px;
+            color: #000000;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="tel"], 
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body style="background-color: aliceblue;">
+
+  <div class="form-container">
+    <h2>ĐƠN ĐĂNG KÝ ỨNG TUYỂN</h2>
+
+    <form action="/action_page.php"> 
+        
+        <!-- Khối 1: Thông tin cá nhân -->
+        <div class="form-group">
+            <h3>Thông tin cá nhân (Personal Information)</h3>
+            
+            <label for="fname">Họ và tên (Full name)</label>
+            <input type="text" id="fname" name="fname" required>
+
+            <label for="email">Địa chỉ email (Email Address)</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Số điện thoại (Phone)</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div> <!-- Đóng thẻ div khối 1 -->
+
+        <!-- Khối 2: Đơn đăng ký -->
+        <div class="form-group">
+            <h3>Đơn đăng ký (Application)</h3>
+            
+            <label for="coverletter">Thư ứng tuyển (Cover Letter):</label>
+            <textarea id="coverletter" name="coverletter" placeholder="Tại sao bạn phù hợp vị trí này?"></textarea>
+
+            <label for="resume">Tải lên CV/Resume (Upload Resume/CV)</label>  
+            <input type="file" id="resume" name="resume">
+        </div> <!-- Đóng thẻ div khối 2 -->
+
+        <button type="submit">Gửi đơn ứng tuyển</button>
+    </form>
+  </div> <!-- Đóng thẻ div form-container -->
+
+</body>
+</html>
